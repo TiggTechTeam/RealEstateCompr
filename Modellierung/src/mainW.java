@@ -13,18 +13,20 @@ public class mainW {
 	
 	int anzhl = sc.nextInt();
 	int i = 0;
-	double x, y ;
+	double x, y, z ;
 	int zahl;
 	while (i < anzhl) {
 		System.out.println("Is this a Flat or House? For a Flat press (1) for a House press (2) ");
 		zahl = sc.nextInt();
 		if(zahl ==1) {
 		
-			System.out.println("Welche W1 Kooridante ");
+			System.out.println("Flat - Square Meters: ");
 			x = sc.nextDouble();
-			System.out.println("Welche W2 Kooridante ");
+			System.out.println("Flat - Build date ");
 			y =sc.nextDouble();
-			Wohnung w = new Wohnung(x,y,3);
+			System.out.println("Flate - Price ");
+			z =sc.nextDouble();
+			Wohnung w = new Wohnung(x,y,z);
 			WohnungListe.add(w);
 			i++;
 			
@@ -32,11 +34,13 @@ public class mainW {
 		}
 		if(zahl ==2) {
 			
-			System.out.println("Welche H1 Kooridante ");
+			System.out.println("House - Square Meters: ");
 			x = sc.nextDouble();
-			System.out.println("Welche H2 Kooridante ");
+			System.out.println("House - Build ");
 			y =sc.nextDouble();
-			Haus h = new Haus(x,y,4);
+			System.out.println("House - Price ");
+			z =sc.nextDouble();
+			Haus h = new Haus(x,y,z);
 			HausListe.add(h);
 			i++;
 			
